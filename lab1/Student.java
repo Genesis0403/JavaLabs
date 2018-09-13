@@ -19,7 +19,7 @@ public class Student {
         studentHobby = info[6];
 
         for (int i = 7; i < info.length; i++) {
-            if (lifeMoto.isEmpty()){
+            if (lifeMoto != null){
                 lifeMoto = info[i] + " ";
             } else {
                 lifeMoto += info[i] + " ";
