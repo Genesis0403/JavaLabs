@@ -13,13 +13,13 @@ public class Student {
     Student(String[] info) {
         studentName = info[0];
         studentSurname = info[1];
-        studentPatronymic = info[3];
-        groupNumber = info[4];
-        kindOfActivity = info[5];
-        studentHobby = info[6];
+        studentPatronymic = info[2];
+        groupNumber = info[3];
+        kindOfActivity = info[4];
+        studentHobby = info[5];
 
-        for (int i = 7; i < info.length; i++) {
-            if (lifeMoto != null){
+        for (int i = 6; i < info.length; i++) {
+            if (lifeMoto == null){
                 lifeMoto = info[i] + " ";
             } else {
                 lifeMoto += info[i] + " ";
