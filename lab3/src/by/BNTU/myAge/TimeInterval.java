@@ -12,9 +12,9 @@ public class TimeInterval {
         this.years = years;
         this.months = months;
         this.days = days;
-        this.hours = hours;
-        this.minutes = minutes;
-        this.seconds = seconds;
+        this.hours = Math.abs(hours);
+        this.minutes = Math.abs(minutes);
+        this.seconds = Math.abs(seconds);
     }
 
     @Override

@@ -6,6 +6,15 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
 
+/**
+ *  This class calculates time difference between now
+ *  and birth day of a human.
+ *
+ * @author Vlad Korotkevich
+ * @author Evgeniy Filippovich
+ * @version 1.0
+ */
+
 public class TimeDifference {
     private LocalDateTime birth;
     private LocalDateTime now = LocalDateTime.now();
@@ -26,6 +35,7 @@ public class TimeDifference {
         return Period.between(birth.toLocalDate(), now.toLocalDate()).getDays();
     }
 
+    //can return negative number, but its okay, use Math.abs()
     public int inHours() {
         LocalDateTime birth = LocalDateTime.from(this.birth);
         birth = birth.plusYears(inYears()).plusMonths(inMonths()).plusDays(inDays());

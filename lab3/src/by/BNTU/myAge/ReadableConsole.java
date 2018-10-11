@@ -10,7 +10,7 @@ public class ReadableConsole {
     public Human input() {
         System.out.print("Input your birthday(dd.MM.yyyy HH:mm:ss): ");
         try {
-            return new Human(new SimpleDateFormat("dd.MM.yyyy HH:mm:ss").parse(sc.next()));
+            return new Human(new SimpleDateFormat("dd.MM.yyyy HH:mm:ss").parse(sc.nextLine()));
         } catch (ParseException e) {
             e.printStackTrace();
         }
