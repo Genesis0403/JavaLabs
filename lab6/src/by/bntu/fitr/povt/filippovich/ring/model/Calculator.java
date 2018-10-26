@@ -1,7 +1,7 @@
 package by.bntu.fitr.povt.filippovich.ring.model;
 
 public class Calculator {
-    private double CircleArea(double r){
+    private static double CircleArea(double r){
         double area = Math.PI * Math.pow(r,2);
         return area;
     }
