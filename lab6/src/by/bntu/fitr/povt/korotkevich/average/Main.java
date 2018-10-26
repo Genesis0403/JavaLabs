@@ -1,4 +1,4 @@
-package by.bntu.fitr.povt.korotkevich;
+package by.bntu.fitr.povt.korotkevich.average;
 
 import by.bntu.fitr.povt.korotkevich.average.controller.Controller;
 
