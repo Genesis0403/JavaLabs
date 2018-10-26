@@ -6,15 +6,18 @@ import by.bntu.fitr.povt.filippovich.triangle.model.Input;
 
 public class Controller {
     public void Execute() {
-        double a = Input.UserInput("Input a: ");
-        double b = Input.UserInput("Input b: ");
-        double s = Calculator.CalculateArea(a, b);
-        double p = Calculator.CalculatePerimeter(a, b);
-        double c = Calculator.CalculateHypotenuse(a, b);
+        Input input = new Input();
+        Calculator calc = new Calculator();
+        Printer pr = new Printer();
+        double a = input.UserInput("Input a: ");
+        double b = input.UserInput("Input b: ");
+        double s = calc.CalculateArea(a, b);
+        double p = calc.CalculatePerimeter(a, b);
+        double c = calc.CalculateHypotenuse(a, b);
 
-        Printer.print("Triangle with a = " + a + " b = " + b + " :");
-        Printer.print("S = " + s);
-        Printer.print("P = " + p);
-        Printer.print("C = " + c);
+        pr.print("Triangle with a = " + a + " b = " + b + " :");
+        pr.print("S = " + s);
+        pr.print("P = " + p);
+        pr.print("C = " + c);
     }
 }
