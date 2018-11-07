@@ -5,10 +5,11 @@ import by.bntu.fitr.povt.filippovich.triangle.model.Calculator;
 import by.bntu.fitr.povt.filippovich.triangle.model.Input;
 
 public class Controller {
+    Input input = new Input();
+    Calculator calc = new Calculator();
+    Printer pr = new Printer();
+
     public void Execute() {
-        Input input = new Input();
-        Calculator calc = new Calculator();
-        Printer pr = new Printer();
         double a = input.UserInput("Input a: ");
         double b = input.UserInput("Input b: ");
         double s = calc.CalculateArea(a, b);
