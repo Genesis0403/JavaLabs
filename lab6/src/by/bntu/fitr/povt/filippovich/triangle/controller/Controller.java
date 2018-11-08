@@ -8,7 +8,6 @@ public class Controller {
     Input input = new Input();
     Calculator calc = new Calculator();
     Printer pr = new Printer();
-
     public void Execute() {
         double a = input.UserInput("Input a: ");
         double b = input.UserInput("Input b: ");
