@@ -5,8 +5,8 @@ import by.bntu.fitr.povt.filippovich.ring.model.RingAreaCalculator;
 import by.bntu.fitr.povt.filippovich.ring.model.Input;
 
 public class Controller {
-    Printer printer = new Printer();
-    Input input = new Input();
+    private Printer printer = new Printer();
+    private Input input = new Input();
 
     public void execute(){
         RingAreaCalculator calc = input.execute();
