@@ -3,7 +3,7 @@ package by.bntu.fitr.numbers;
 public class NodAndNok {
 
     public int Nod(int a, int b) {
-        while (a != 0 || b != 0) {
+        while (a != 0 && b != 0) {
             if (a > b) {
                 a %= b;
             } else {
