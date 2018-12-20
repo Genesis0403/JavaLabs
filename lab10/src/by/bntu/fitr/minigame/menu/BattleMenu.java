@@ -3,8 +3,8 @@ package by.bntu.fitr.minigame.menu;
 import by.bntu.fitr.minigame.domain.BattleGround;
 import by.bntu.fitr.minigame.domain.Creature;
 import by.bntu.fitr.minigame.domain.Union;
-import by.bntu.fitr.minigame.domain.west.WestUnion;
-import by.bntu.fitr.minigame.domain.east.EastUnion;
+import by.bntu.fitr.minigame.domain.east.WestUnion;
+import by.bntu.fitr.minigame.domain.west.EastUnion;
 import by.bntu.fitr.minigame.view.GroupView;
 
 import java.util.Map;

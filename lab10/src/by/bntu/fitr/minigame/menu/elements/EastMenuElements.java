@@ -1,9 +1,9 @@
 package by.bntu.fitr.minigame.menu.elements;
 
+import by.bntu.fitr.minigame.domain.east.WestUnion;
 import by.bntu.fitr.minigame.domain.west.Beast;
 import by.bntu.fitr.minigame.domain.west.DarkElf;
 import by.bntu.fitr.minigame.domain.west.Vampire;
-import by.bntu.fitr.minigame.domain.west.WestUnion;
 import by.bntu.fitr.minigame.menu.AddMenu;
 import by.bntu.fitr.minigame.menu.SubMenu;
 
