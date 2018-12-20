@@ -21,4 +21,12 @@ public class ForestElf extends Creature {
     public int buff() {
         return role.getPercent() / 100 * getAgility();
     }
+
+    @Override
+    public String toString() {
+        return "ForestElf{" + super.toString() +
+                "weapon=" + weapon +
+                ", role=" + role +
+                '}';
+    }
 }

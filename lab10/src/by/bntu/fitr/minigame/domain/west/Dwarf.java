@@ -21,4 +21,12 @@ public class Dwarf extends Creature {
     public int buff() {
         return role.getPercent() / 100 * getHealth();
     }
+
+    @Override
+    public String toString() {
+        return "Dwarf{" + super.toString() +
+                "weapon=" + weapon +
+                ", role=" + role +
+                '}';
+    }
 }

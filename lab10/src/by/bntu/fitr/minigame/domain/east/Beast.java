@@ -21,4 +21,12 @@ public class Beast extends Creature {
     public int buff() {
         return role.getPercent() / 100 * getHealth();
     }
+
+    @Override
+    public String toString() {
+        return "Beast{" + super.toString() +
+                "weapon=" + weapon +
+                ", role=" + role +
+                '}';
+    }
 }

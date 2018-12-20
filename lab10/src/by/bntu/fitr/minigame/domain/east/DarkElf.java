@@ -21,4 +21,12 @@ public class DarkElf extends Creature {
     public int buff() {
         return (role.getPercent() + weapon.getDamage()) / 100 * getIntelligence();
     }
+
+    @Override
+    public String toString() {
+        return "DarkElf{" + super.toString() +
+                "weapon=" + weapon +
+                ", role=" + role +
+                '}';
+    }
 }

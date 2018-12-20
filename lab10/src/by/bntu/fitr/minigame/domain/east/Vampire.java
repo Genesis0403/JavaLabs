@@ -22,4 +22,12 @@ public class Vampire extends Creature {
     public int buff() {
         return (weapon.getDamage() + role.getPercent()) / 100 * getAgility() ;
     }
+
+    @Override
+    public String toString() {
+        return "Vampire{" + super.toString() +
+                "weapon=" + weapon +
+                ", role=" + role +
+                '}';
+    }
 }

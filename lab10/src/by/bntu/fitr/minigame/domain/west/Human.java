@@ -21,4 +21,12 @@ public class Human extends Creature {
     public int buff() {
         return role.getPercent() / 100 * getStrength() + role.getPercent() / 100 * getHealth();
     }
+
+    @Override
+    public String toString() {
+        return "Human{" + super.toString() +
+                "weapon=" + weapon +
+                ", role=" + role +
+                '}';
+    }
 }

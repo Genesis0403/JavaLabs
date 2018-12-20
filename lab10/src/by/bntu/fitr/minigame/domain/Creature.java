@@ -15,10 +15,6 @@ abstract public class Creature implements Buff {
 
     abstract protected int getWeaponDamage();
 
-    public void getDamage(int damage) {
-        health -= damage;
-    }
-
     public int dealDamage() {
         return buff() + getWeaponDamage();
     }
@@ -37,5 +33,13 @@ abstract public class Creature implements Buff {
 
     public int getIntelligence() {
         return intelligence;
+    }
+
+    @Override
+    public String toString() {
+        return "health=" + health +
+                ", strength=" + strength +
+                ", agility=" + agility +
+                ", intelligence=" + intelligence + ",";
     }
 }
