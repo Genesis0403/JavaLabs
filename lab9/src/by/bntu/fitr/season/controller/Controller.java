@@ -10,6 +10,7 @@ public class Controller {
     private Input input = new Input();
 
     public void execute(){
+        printer.prev();
         int number_month = input.read_int();
         printer.execute(season.execute(number_month));
     }

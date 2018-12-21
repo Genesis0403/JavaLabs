@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Input {
     Scanner scanner = new Scanner(System.in);
     public char read_char() {
-        System.out.print("Input char: ");
+        //System.out.print("Input char: ");
         String input = scanner.next();
         char ch = input.charAt(0);
         if (input.length() > 1) {
@@ -29,7 +29,7 @@ public class Input {
     }
     public double read_double(){
         double input;
-        System.out.println("Input double: ");
+        //System.out.println("Input double: ");
         if (scanner.hasNextDouble()){
             input = scanner.nextDouble();
         }

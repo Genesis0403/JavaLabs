@@ -14,6 +14,6 @@ public class Answer {
     }
 
     public int grade(int tasks){
-        return (tasks - getMistake())/tasks * 10;
+        return (int)((double)(tasks - getMistake())/tasks * 10);
     }
 }
