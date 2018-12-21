@@ -1,6 +1,6 @@
-package by.bntu.fitr.happy_tickets;
+package by.bntu.fitr.dop;
 
-import by.bntu.fitr.happy_tickets.controller.Controller;
+import by.bntu.fitr.dop.controller.Controller;
 
 public class Main {
     public static void main(String[] args) {

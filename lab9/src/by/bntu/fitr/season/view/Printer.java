@@ -5,4 +5,7 @@ public class Printer {
         System.out.println("Season:");
         System.out.println(result);
     }
+    public void prev(){
+        System.out.print("Choose month: ");
+    }
 }

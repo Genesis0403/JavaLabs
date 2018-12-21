@@ -13,6 +13,7 @@ public class Controller {
     private Answer answer = new Answer();
     private Random random = new Random();
     public void execute(){
+        printer.prev();
         int tasks = input.read_int();
         int result;
         for(int i = 0; i < tasks; i++){
