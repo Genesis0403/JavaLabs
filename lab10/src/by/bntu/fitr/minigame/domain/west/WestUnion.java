@@ -6,20 +6,20 @@ import by.bntu.fitr.minigame.domain.Union;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EastUnion implements Union {
-    private static EastUnion instance;
+public class WestUnion implements Union {
+    private static WestUnion instance;
     private Map<Creature, Integer> union = new HashMap<>();
     {
-        union.put(new ForestElf(150, 10, 30,10), 30);
-        union.put(new Human(100, 30, 15,10), 30);
-        union.put(new Dwarf(200, 40, 5, 5), 30);
+        union.put(new DarkElf(100, 5, 5, 60), 30);
+        union.put(new Vampire(150, 15, 30, 10), 30);
+        union.put(new Beast(200, 40, 5, 5), 30);
     }
 
-    private EastUnion(){}
+    private WestUnion(){}
 
-    public static EastUnion getInstance() {
+    public static WestUnion getInstance() {
         if (instance == null) {
-            instance = new EastUnion();
+            instance = new WestUnion();
         }
         return instance;
     }
@@ -31,7 +31,6 @@ public class EastUnion implements Union {
                 union.compute(mob.getKey(), (key, value) -> value += amount);
             }
         }
-        //union.forEach((k,v) -> System.out.println(k + " " + v));
     }
 
     @Override

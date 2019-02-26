@@ -1,14 +1,15 @@
-package by.bntu.fitr.minigame.domain.east;
+package by.bntu.fitr.minigame.domain.west;
 
 import by.bntu.fitr.minigame.domain.Creature;
 import by.bntu.fitr.minigame.domain.Role;
 import by.bntu.fitr.minigame.domain.Weapon;
 
-public class DarkElf extends Creature {
-    private Weapon weapon = Weapon.STAFF;
-    private Role role = Role.SORCERER;
+public class Vampire extends Creature {
+    private Weapon weapon = Weapon.DAGGER;
+    private Role role = Role.THIEF;
 
-    public DarkElf(int health, int strength, int agility, int intelligence) {
+
+    public Vampire(int health, int strength, int agility, int intelligence) {
         super(health, strength, agility, intelligence);
     }
 
@@ -19,12 +20,12 @@ public class DarkElf extends Creature {
 
     @Override
     public int buff() {
-        return (role.getPercent() + weapon.getDamage()) / 100 * getIntelligence();
+        return (weapon.getDamage() + role.getPercent()) / 100 * getAgility() ;
     }
 
     @Override
     public String toString() {
-        return "DarkElf{" + super.toString() +
+        return "Vampire{" + super.toString() +
                 "weapon=" + weapon +
                 ", role=" + role +
                 '}';
