@@ -2,7 +2,6 @@ package by.bntu.fitr.guesser.controller;
 
 import by.bntu.fitr.guesser.domain.BinaryGuesser;
 import by.bntu.fitr.guesser.domain.RandomGuesser;
-import by.bntu.fitr.minigame.menu.InputChecker;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

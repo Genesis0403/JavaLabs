@@ -1,7 +1,7 @@
 package by.bntu.fitr.minigame.menu;
 
-import by.bntu.fitr.minigame.domain.east.WestUnion;
-import by.bntu.fitr.minigame.domain.west.EastUnion;
+import by.bntu.fitr.minigame.domain.west.WestUnion;
+import by.bntu.fitr.minigame.domain.east.EastUnion;
 
 public class OutputMenu implements SubMenu {
 

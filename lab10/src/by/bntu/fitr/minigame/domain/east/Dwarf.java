@@ -1,4 +1,4 @@
-package by.bntu.fitr.minigame.domain.west;
+package by.bntu.fitr.minigame.domain.east;
 
 import by.bntu.fitr.minigame.domain.Creature;
 import by.bntu.fitr.minigame.domain.Role;

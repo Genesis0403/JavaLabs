@@ -4,11 +4,11 @@ import by.bntu.fitr.minigame.domain.Creature;
 import by.bntu.fitr.minigame.domain.Role;
 import by.bntu.fitr.minigame.domain.Weapon;
 
-public class ForestElf extends Creature {
-    private Weapon weapon = Weapon.BOW;
-    private Role role = Role.HUNTER;
+public class DarkElf extends Creature {
+    private Weapon weapon = Weapon.STAFF;
+    private Role role = Role.SORCERER;
 
-    public ForestElf(int health, int strength, int agility, int intelligence) {
+    public DarkElf(int health, int strength, int agility, int intelligence) {
         super(health, strength, agility, intelligence);
     }
 
@@ -19,12 +19,12 @@ public class ForestElf extends Creature {
 
     @Override
     public int buff() {
-        return role.getPercent() / 100 * getAgility();
+        return (role.getPercent() + weapon.getDamage()) / 100 * getIntelligence();
     }
 
     @Override
     public String toString() {
-        return "ForestElf{" + super.toString() +
+        return "DarkElf{" + super.toString() +
                 "weapon=" + weapon +
                 ", role=" + role +
                 '}';

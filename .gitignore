@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 */.idea
 */*.iml
 */target
 */out
-=======
-*/.idea
-*/*.iml
-*/target
-*/out
->>>>>>> master/master
 */*.xml
