@@ -26,6 +26,7 @@ public class WestUnion implements Union {
 
     @Override
     public void add(Class creature, int amount) {
+        if (creature == null) throw new IllegalArgumentException("Null is not acceptable.");
         for (Map.Entry<Creature, Integer> mob : union.entrySet()) {
             if (mob.getKey().getClass() == creature) {
                 union.compute(mob.getKey(), (key, value) -> value += amount);

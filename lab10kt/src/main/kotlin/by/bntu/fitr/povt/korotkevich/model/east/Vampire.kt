@@ -3,15 +3,17 @@ package by.bntu.fitr.povt.korotkevich.model.east
 import by.bntu.fitr.povt.korotkevich.model.Creature
 import by.bntu.fitr.povt.korotkevich.model.Role
 import by.bntu.fitr.povt.korotkevich.model.Weapon
-import java.lang.StringBuilder
 
-class ForestElf(health: Int, strength: Int,
-                agility: Int, intelligence: Int,
-                val role: Role, val weapon: Weapon) : Creature(health, strength, agility, intelligence) {
+class Vampire(health: Int = 100, strength: Int = 20,
+              agility: Int = 50, intelligence: Int = 10,
+              val role: Role = Role.THIEF, val weapon: Weapon = Weapon.DAGGER)
+    : Creature(health, strength, agility, intelligence) {
+
+    override val id: String = "Vampire"
 
     override fun getSelfDamage() = weapon.damage + buff(role)
 
-    override fun toString() = StringBuilder("ForestElf(").apply {
+    override fun toString() = StringBuilder("Vampire(").apply {
         append(super.toString())
         append("role: $role, weapon: $weapon)")
     }.toString()

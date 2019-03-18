@@ -8,6 +8,9 @@ interface Buff {
 
 abstract class Creature(val health: Int, val strength: Int,
                         val agility: Int, val intelligence: Int) : Buff {
+
+    abstract val id: String
+
     abstract fun getSelfDamage(): Int
 
     final override fun buff(role: Role) = (when(role) {

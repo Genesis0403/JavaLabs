@@ -1,7 +1,13 @@
 package by.bntu.fitr.povt.korotkevich.model.east
 
-import by.bntu.fitr.povt.korotkevich.model.Creature
+import by.bntu.fitr.povt.korotkevich.model.AbstractUnion
 
-class EastUnion {
-    val union: Map<Creature, Int>  = mutableMapOf()
+const val UNIT_DEFAULT_AMOUNT = 30
+
+object EastUnion : AbstractUnion() {
+    init {
+        union[Beast()] = UNIT_DEFAULT_AMOUNT
+        union[Vampire()] = UNIT_DEFAULT_AMOUNT
+        union[DarkElf()] = UNIT_DEFAULT_AMOUNT
+    }
 }
