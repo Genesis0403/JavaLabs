@@ -3,11 +3,11 @@ package by.bntu.fitr.povt.korotkevich.model.west
 import by.bntu.fitr.povt.korotkevich.model.Creature
 import by.bntu.fitr.povt.korotkevich.model.Role
 import by.bntu.fitr.povt.korotkevich.model.Weapon
+import by.bntu.fitr.povt.korotkevich.model.buff
 
-class Human(health: Int = 100, strength: Int = 30,
-            agility: Int = 20, intelligence: Int = 20,
-            val role: Role = Role.KNIGHT, val weapon: Weapon = Weapon.SWORD)
-    : Creature(health, strength, agility, intelligence) {
+class Human(override val health: Int = 100, override val strength: Int = 30,
+            override val agility: Int = 20, override val intelligence: Int = 20,
+            val role: Role = Role.KNIGHT, val weapon: Weapon = Weapon.SWORD) : Creature() {
 
     override val id: String = "Human"
 

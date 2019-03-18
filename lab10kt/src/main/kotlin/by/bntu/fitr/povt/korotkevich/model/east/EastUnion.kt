@@ -1,8 +1,7 @@
 package by.bntu.fitr.povt.korotkevich.model.east
 
 import by.bntu.fitr.povt.korotkevich.model.AbstractUnion
-
-const val UNIT_DEFAULT_AMOUNT = 30
+import by.bntu.fitr.povt.korotkevich.model.UNIT_DEFAULT_AMOUNT
 
 object EastUnion : AbstractUnion() {
     init {
@@ -10,4 +9,6 @@ object EastUnion : AbstractUnion() {
         union[Vampire()] = UNIT_DEFAULT_AMOUNT
         union[DarkElf()] = UNIT_DEFAULT_AMOUNT
     }
+
+    override fun unionName() = "East Union"
 }

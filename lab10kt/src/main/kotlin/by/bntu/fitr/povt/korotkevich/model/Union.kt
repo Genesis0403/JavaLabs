@@ -8,6 +8,7 @@ interface Union {
     fun getArmy(): Map<Creature, Int>
     fun addUnitAmount(id: String, amount: Int)
     fun getArmySize(): Int
+    fun contatinsId(id: String): Boolean
 }
 
 fun Union.battle(other: Union) {
@@ -15,7 +16,7 @@ fun Union.battle(other: Union) {
     val thisTroop = get(Random.nextInt(getArmySize()))
     when(Random.nextInt(2)) {
         0 -> add(thisTroop.first, countUnitAmount(thisTroop, otherTroop))
-        1 -> add(otherTroop.first, countUnitAmount(otherTroop, thisTroop))
+        1 -> other.add(otherTroop.first, countUnitAmount(otherTroop, thisTroop))
     }
 }
 
