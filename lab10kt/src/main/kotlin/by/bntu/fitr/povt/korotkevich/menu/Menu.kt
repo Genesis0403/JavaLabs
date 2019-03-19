@@ -41,3 +41,19 @@ open class Menu {
         commandsNames.withIndex().forEach { (index, value) -> append("$index. $value\n") }
     }.toString()
 }
+
+fun Menu.validateAndReturn(question: String, predicate: (Int) -> Boolean): Int {
+    val sc = Scanner(System.`in`)
+    var option: Int
+    do {
+        println(question)
+        option = try {
+            sc.nextInt()
+        } catch (e: Exception) {
+            println("Invalid input!")
+            -1
+        }
+    } while (predicate.invoke(option))
+    return option
+}
+

@@ -5,6 +5,7 @@ import by.bntu.fitr.povt.korotkevich.model.battle
 import by.bntu.fitr.povt.korotkevich.model.east.EastUnion
 import by.bntu.fitr.povt.korotkevich.model.getIds
 import by.bntu.fitr.povt.korotkevich.model.west.WestUnion
+import java.lang.StringBuilder
 import java.util.*
 
 class MainMenu : Menu() {
@@ -27,23 +28,13 @@ class AddMenu : Menu() {
         add("Add to West") { addUnits(WestUnion) }
     }
 
-    private fun addUnits(union: Union) { //TODO try to think about predicate refactor or as submenu
+    private fun addUnits(union: Union) {
         val unionIds = union.getIds()
-        unionIds.forEachIndexed { i, v -> println("${i + 1}. $v") }
-        var option: Int
-        var amount: Int
-        do {
-            try {
-                println("Choose troop:")
-                option = sc.nextInt()
-                println("Input amount:")
-                amount = sc.nextInt()
-            } catch (e: Exception) {
-                println("Wrong input!")
-                option = -1 //TODO crutch
-                amount = -1
-            }
-        } while (option <= 0 || option > unionIds.size || amount < 0)
+        val question = StringBuilder("Choose troop:\n").apply {
+            unionIds.forEachIndexed { i, v -> append("${i + 1}. $v\n") }
+        }.toString()
+        val option = validateAndReturn(question) {option -> option <= 0 || option > unionIds.size}
+        val amount = validateAndReturn("Input amount:") {amount -> amount < 0}
         EastUnion.addUnitAmount(unionIds[option - 1], amount)
     }
 }
@@ -58,21 +49,17 @@ class ShowMenu : Menu() {
 class BattleMenu : Menu() {
     private val unions: List<Union> = listOf(EastUnion, WestUnion)
 
-    init { //TODO create something more flexible
+    init {
         for (union in unions) {
             add(union.unionName()) {
-                val sc = Scanner(System.`in`)
-                var option: Int
-                do {
-                    println("Who to attack:")
-                    unions.forEachIndexed { i, v -> println("${i + 1}. ${v.unionName()}") }
-                    option = try {
-                        sc.nextInt()
-                    } catch (e: Exception) {
-                        println("Invalid input!")
-                        -1
-                    }
-                } while (option <= 0 || option > unions.size || option - 1 == unions.indexOf(union))
+                val question = StringBuilder("Who to attack:\n").apply {
+                    unions.forEachIndexed { i, v -> append("${i + 1}. ${v.unionName()}\n") }
+                }.toString()
+
+                val option = validateAndReturn(question) {
+                    option -> option <= 0 || option > unions.size || option - 1 == unions.indexOf(union)
+                }
+
                 println("Unions before battle:\n$union\n${unions[option-1]}")
                 union.battle(unions[option - 1])
                 println("Unions after battle:\n$union\n${unions[option-1]}")

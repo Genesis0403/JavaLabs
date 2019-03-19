@@ -14,7 +14,6 @@ class DarkElf(override val health: Int = 80, override val strength: Int = 5,
     override fun getSelfDamage() = weapon.damage + buff(role)
 
     override fun toString() = StringBuilder("DarkElf(").apply {
-        append(super.toString())
-        append("role: $role, weapon: $weapon)")
+        append("${super.toString()}, role: $role, weapon: $weapon)")
     }.toString()
 }
