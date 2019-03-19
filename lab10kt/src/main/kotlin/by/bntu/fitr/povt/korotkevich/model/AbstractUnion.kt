@@ -7,8 +7,6 @@ const val UNIT_DEFAULT_AMOUNT = 30
 abstract class AbstractUnion : Union {
     protected val union: MutableMap<Creature, Int> = LinkedHashMap()
 
-    protected abstract fun unionName(): String
-
     override fun add(creature: Creature, amount: Int) {
         union[creature] = amount
     }
@@ -25,7 +23,7 @@ abstract class AbstractUnion : Union {
         }
     }
 
-    override fun contatinsId(id: String): Boolean
+    override fun containsId(id: String): Boolean
             = union.keys.map { cr: Creature -> cr.id}.contains(id)
 
     override fun toString(): String {

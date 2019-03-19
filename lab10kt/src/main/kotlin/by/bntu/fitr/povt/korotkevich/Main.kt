@@ -1,10 +1,7 @@
 package by.bntu.fitr.povt.korotkevich
 
+import by.bntu.fitr.povt.korotkevich.menu.MainMenu
+
 fun main() {
-    val a = mapOf(1 to 1)
-    val b = a as MutableMap
-
-    b[2] = 2
-
-    print(a)
+    MainMenu().run()
 }
