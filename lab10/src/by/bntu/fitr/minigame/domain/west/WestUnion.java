@@ -2,6 +2,9 @@ package by.bntu.fitr.minigame.domain.west;
 
 import by.bntu.fitr.minigame.domain.Creature;
 import by.bntu.fitr.minigame.domain.Union;
+import by.bntu.fitr.minigame.domain.west.Beast;
+import by.bntu.fitr.minigame.domain.west.DarkElf;
+import by.bntu.fitr.minigame.domain.west.Vampire;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +29,6 @@ public class WestUnion implements Union {
 
     @Override
     public void add(Class creature, int amount) {
-        if (creature == null) throw new IllegalArgumentException("Null is not acceptable.");
         for (Map.Entry<Creature, Integer> mob : union.entrySet()) {
             if (mob.getKey().getClass() == creature) {
                 union.compute(mob.getKey(), (key, value) -> value += amount);
