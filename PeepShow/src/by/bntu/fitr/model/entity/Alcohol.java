@@ -5,10 +5,20 @@ public class Alcohol {
     private int price;
     private int degree;
 
+    public Alcohol() {
+
+    }
+
     public Alcohol(String name, int price, int degree) {
         this.name = name;
         this.price = price;
         this.degree = degree;
+    }
+
+    public Alcohol(Alcohol alcohol) {
+        name = alcohol.name;
+        price = alcohol.price;
+        degree = alcohol.degree;
     }
 
     public String getName() {

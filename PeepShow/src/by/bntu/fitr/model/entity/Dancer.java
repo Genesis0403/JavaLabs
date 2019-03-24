@@ -1,19 +1,32 @@
 package by.bntu.fitr.model.entity;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class Dancer {
     private String name;
     private int age;
-    private String[] service;
+    private List<String> service;
     private int price;
     private String sex;
 
-    public Dancer(String name, int age, String[] service, int price) {
+    public Dancer() {
+
+    }
+
+    public Dancer(String name, int age, List<String> service, int price, String sex) {
         this.name = name;
         this.age = age;
         this.service = service;
         this.price = price;
+        this.sex = sex;
+    }
+
+    public Dancer(Dancer dancer) {
+        age = dancer.age;
+        price = dancer.price;
+        name = dancer.name;
+        sex = dancer.sex;
+        service = dancer.service;
     }
 
     public String getName() {
@@ -33,11 +46,11 @@ public class Dancer {
             this.age = age;
     }
 
-    public String[] getService() {
+    public List<String> getService() {
         return service;
     }
 
-    public void setService(String[] service) {
+    public void setService(List<String> service) {
         this.service = service;
     }
 
@@ -63,7 +76,7 @@ public class Dancer {
         return "Dancer{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", service=" + (service == null ? null : Arrays.asList(service)) +
+                ", service=" + service +
                 ", price=" + price +
                 ", sex='" + sex + '\'' +
                 '}';
