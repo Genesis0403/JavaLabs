@@ -18,7 +18,7 @@ public class Manager {
     }
 
     public Manager(Manager manager) {
-        listOfDancers = manager.listOfDancers;
+        listOfDancers = new ArrayList<>(manager.listOfDancers);
     }
 
     public void add(Dancer dancer) {

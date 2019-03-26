@@ -1,8 +1,15 @@
 package by.bntu.fitr.model.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Dancer {
+    private static final String DEFAULT_NAME = "XXXX";
+    private static final int DEFAULT_AGE = 18;
+    private static final int DEFAULT_PRICE = 0;
+    private static final String DEFAULT_SEX = "XXXX";
+
+
     private String name;
     private int age;
     private List<String> service;
@@ -10,7 +17,11 @@ public class Dancer {
     private String sex;
 
     public Dancer() {
-
+        name = DEFAULT_NAME;
+        age = DEFAULT_AGE;
+        price = DEFAULT_PRICE;
+        sex = DEFAULT_SEX;
+        service = new ArrayList<>();
     }
 
     public Dancer(String name, int age, List<String> service, int price, String sex) {
@@ -26,7 +37,7 @@ public class Dancer {
         price = dancer.price;
         name = dancer.name;
         sex = dancer.sex;
-        service = dancer.service;
+        service = new ArrayList<>(dancer.service);
     }
 
     public String getName() {
@@ -34,7 +45,9 @@ public class Dancer {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null) {
+            this.name = name;
+        }
     }
 
     public int getAge() {
@@ -51,7 +64,9 @@ public class Dancer {
     }
 
     public void setService(List<String> service) {
-        this.service = service;
+        if (service != null) {
+            this.service = service;
+        }
     }
 
     public int getPrice() {
@@ -68,7 +83,9 @@ public class Dancer {
     }
 
     public void setSex(String sex) {
-        this.sex = sex;
+        if (sex != null) {
+            this.sex = sex;
+        }
     }
 
     @Override

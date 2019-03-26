@@ -2,10 +2,7 @@ package by.bntu.fitr.model;
 
 import by.bntu.fitr.model.entity.Alcohol;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class Barman {
     private List<Alcohol> listOfAlcohol;
@@ -19,11 +16,12 @@ public class Barman {
     }
 
     public Barman(Barman barman) {
-        listOfAlcohol = barman.listOfAlcohol;
+        listOfAlcohol = new ArrayList<>(barman.listOfAlcohol);
     }
 
     public void add(Alcohol alcohol) {
         listOfAlcohol.add(alcohol);
+
     }
 
     public void remove(String name, int degree, int price) {
