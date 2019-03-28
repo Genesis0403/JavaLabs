@@ -2,6 +2,7 @@ package by.bntu.fitr.model.logic;
 
 import by.bntu.fitr.model.entity.Dancer;
 import by.bntu.fitr.model.entity.NullDancer;
+import by.bntu.fitr.model.entity.SexEnum;
 
 import java.util.Collection;
 
@@ -9,11 +10,11 @@ public class SearchDancer {
 
     private SearchDancer(){}
 
-    public static Dancer findDancer(Collection<? extends Dancer> list, String name, int age, int price, String sex) {
+    public static Dancer findDancer(Collection<? extends Dancer> list, String name, int age, int price, SexEnum sex) {
         Dancer result = new NullDancer();
         for (Dancer dancer : list) {
             if (dancer.getName().equals(name) && dancer.getAge() == age && dancer.getPrice() == price
-                    && dancer.getSex().equals(sex)) {
+                    && dancer.getSex() == sex) {
                 result = dancer;
             }
         }
@@ -40,14 +41,13 @@ public class SearchDancer {
         return result;
     }
 
-    public static Dancer findDancer(Collection<? extends Dancer> list, String name, int age, String sex) {
+    public static Dancer findDancer(Collection<? extends Dancer> list, String name, int age, SexEnum sex) {
         Dancer result = new NullDancer();
         for (Dancer dancer : list) {
-            if (dancer.getName().equals(name) && dancer.getAge() == age && dancer.getSex().equals(sex)) {
+            if (dancer.getName().equals(name) && dancer.getAge() == age && dancer.getSex() == sex) {
                 result = dancer;
             }
         }
         return result;
     }
-
 }
