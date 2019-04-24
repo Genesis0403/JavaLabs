@@ -1,5 +1,6 @@
 package by.bntu.fitr.model.logic;
 
+import by.bntu.fitr.model.Barman;
 import by.bntu.fitr.model.entity.Alcohol;
 import by.bntu.fitr.model.entity.NullAlcohol;
 
@@ -9,7 +10,7 @@ public class SearchAlcohol {
 
     private SearchAlcohol(){}
 
-    public static Alcohol findAlcohol(Collection<? extends Alcohol> list, String name, int degree, int price) {
+    public static Alcohol findAlcohol(Barman list, String name, int degree, int price) {
         Alcohol result = new NullAlcohol();
         for (Alcohol alcohol : list) {
             if (alcohol.getName().equals(name) && alcohol.getPrice() == price && alcohol.getDegree() == degree) {
@@ -19,7 +20,7 @@ public class SearchAlcohol {
         return result;
     }
 
-    public static Alcohol findAlcohol(Collection<? extends Alcohol> list, String name) {
+    public static Alcohol findAlcohol(Barman list, String name) {
         Alcohol result = new NullAlcohol();
         for (Alcohol alcohol : list) {
             if (alcohol.getName().equals(name)) {
@@ -29,7 +30,7 @@ public class SearchAlcohol {
         return result;
     }
 
-    public static Alcohol findAlcohol(Collection<? extends Alcohol> list, String name, int price) {
+    public static Alcohol findAlcohol(Barman list, String name, int price) {
         Alcohol result = new NullAlcohol();
         for (Alcohol alcohol : list) {
             if (alcohol.getName().equals(name) && alcohol.getPrice() == price) {

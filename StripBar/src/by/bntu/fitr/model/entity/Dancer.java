@@ -2,6 +2,7 @@ package by.bntu.fitr.model.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Dancer {
     private static final String DEFAULT_NAME = "No name";
@@ -86,6 +87,24 @@ public class Dancer {
         if (sex != null) {
             this.sex = sex;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Dancer)) return false;
+        Dancer dancer = (Dancer) o;
+        return getAge() == dancer.getAge() &&
+                getPrice() == dancer.getPrice() &&
+                getName().equals(dancer.getName()) &&
+                getService().equals(dancer.getService()) &&
+                getSex() == dancer.getSex();
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(getName(), getAge(), getService(), getPrice(), getSex());
     }
 
     @Override

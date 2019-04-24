@@ -1,5 +1,7 @@
 package by.bntu.fitr.model.entity;
 
+import java.util.Objects;
+
 public class Alcohol {
     private static final String DEFAULT_NAME = "XXXX";
     private static final int DEFAULT_PRICE = 0;
@@ -67,6 +69,23 @@ public class Alcohol {
         if (degree > 0) {
             this.degree = degree;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Alcohol)) return false;
+        Alcohol alcohol = (Alcohol) o;
+        return getName().equals(alcohol.getName()) &&
+                getDegree() == alcohol.getDegree() &&
+                getPrice() == alcohol.getPrice() &&
+                getTypeOfAlcohol() == alcohol.getTypeOfAlcohol();
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(getName(), getPrice(), getDegree(), getTypeOfAlcohol());
     }
 
     @Override
