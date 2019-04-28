@@ -1,4 +1,6 @@
-package by.bntu.fitr.model.entity;
+package by.bntu.fitr.model.entity.alcohol;
+
+import by.bntu.fitr.model.entity.TypeOfAlcoholEnum;
 
 import java.util.Objects;
 

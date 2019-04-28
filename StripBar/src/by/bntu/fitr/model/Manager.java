@@ -1,6 +1,7 @@
 package by.bntu.fitr.model;
 
-import by.bntu.fitr.model.entity.Dancer;
+import by.bntu.fitr.model.entity.dancer.Dancer;
+import by.bntu.fitr.model.entity.dancer.NullDancer;
 
 import java.util.*;
 

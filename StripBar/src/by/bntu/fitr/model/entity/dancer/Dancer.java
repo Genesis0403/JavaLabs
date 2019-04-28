@@ -1,19 +1,23 @@
-package by.bntu.fitr.model.entity;
+package by.bntu.fitr.model.entity.dancer;
+
+import by.bntu.fitr.model.entity.SexEnum;
+import by.bntu.fitr.model.entity.service.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.ServiceConfigurationError;
 
 public class Dancer {
     private static final String DEFAULT_NAME = "No name";
     private static final int DEFAULT_AGE = 18;
     private static final int DEFAULT_PRICE = 0;
     private static final SexEnum DEFAULT_SEX = SexEnum.MALE;
-
+    private static final Service DEFAULT_SERVICE = new Service();
 
     private String name;
     private int age;
-    private List<String> service;
+    private Service service;
     private int price;
     private SexEnum sex;
 
@@ -22,10 +26,10 @@ public class Dancer {
         age = DEFAULT_AGE;
         price = DEFAULT_PRICE;
         sex = DEFAULT_SEX;
-        service = new ArrayList<>();
+        service = DEFAULT_SERVICE;
     }
 
-    public Dancer(String name, int age, List<String> service, int price, SexEnum sex) {
+    public Dancer(String name, int age, Service service, int price, SexEnum sex) {
         this.name = name;
         this.age = age;
         this.service = service;
@@ -38,7 +42,7 @@ public class Dancer {
         price = dancer.price;
         name = dancer.name;
         sex = dancer.sex;
-        service = new ArrayList<>(dancer.service);
+        service = dancer.service;
     }
 
     public final String getName() {
@@ -60,11 +64,11 @@ public class Dancer {
             this.age = age;
     }
 
-    public final List<String> getService() {
+    public final Service getService() {
         return service;
     }
 
-    public final void setService(List<String> service) {
+    public final void setService(Service service) {
         if (service != null) {
             this.service = service;
         }

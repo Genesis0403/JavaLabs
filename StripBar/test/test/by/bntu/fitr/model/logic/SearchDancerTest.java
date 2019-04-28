@@ -1,8 +1,8 @@
 package test.by.bntu.fitr.model.logic;
 
 import by.bntu.fitr.model.Manager;
-import by.bntu.fitr.model.entity.Dancer;
-import by.bntu.fitr.model.entity.NullDancer;
+import by.bntu.fitr.model.entity.dancer.Dancer;
+import by.bntu.fitr.model.entity.dancer.NullDancer;
 import by.bntu.fitr.model.entity.SexEnum;
 import by.bntu.fitr.model.logic.SearchDancer;
 import org.junit.Test;

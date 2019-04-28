@@ -1,6 +1,6 @@
 package by.bntu.fitr.model;
 
-import by.bntu.fitr.model.entity.Alcohol;
+import by.bntu.fitr.model.entity.alcohol.Alcohol;
 import org.junit.Test;
 
 import java.util.LinkedList;

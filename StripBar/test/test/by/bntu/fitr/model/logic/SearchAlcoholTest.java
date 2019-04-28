@@ -1,8 +1,8 @@
 package test.by.bntu.fitr.model.logic;
 
 import by.bntu.fitr.model.Barman;
-import by.bntu.fitr.model.entity.Alcohol;
-import by.bntu.fitr.model.entity.NullAlcohol;
+import by.bntu.fitr.model.entity.alcohol.Alcohol;
+import by.bntu.fitr.model.entity.alcohol.NullAlcohol;
 import by.bntu.fitr.model.entity.TypeOfAlcoholEnum;
 import by.bntu.fitr.model.logic.SearchAlcohol;
 import org.junit.Test;

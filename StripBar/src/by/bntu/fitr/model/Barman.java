@@ -1,6 +1,7 @@
 package by.bntu.fitr.model;
 
-import by.bntu.fitr.model.entity.Alcohol;
+import by.bntu.fitr.model.entity.alcohol.Alcohol;
+import by.bntu.fitr.model.entity.alcohol.NullAlcohol;
 
 import java.util.*;
 

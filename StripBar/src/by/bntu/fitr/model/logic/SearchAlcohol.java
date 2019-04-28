@@ -1,10 +1,8 @@
 package by.bntu.fitr.model.logic;
 
 import by.bntu.fitr.model.Barman;
-import by.bntu.fitr.model.entity.Alcohol;
-import by.bntu.fitr.model.entity.NullAlcohol;
-
-import java.util.Collection;
+import by.bntu.fitr.model.entity.alcohol.Alcohol;
+import by.bntu.fitr.model.entity.alcohol.NullAlcohol;
 
 public class SearchAlcohol {
 
